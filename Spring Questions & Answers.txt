@@ -1,0 +1,328 @@
+SPRING MCQ QUESTIONS
+
+ 
+Q 1. Which of the given below are the layers of Spring IO platform? 
+	1). Execution
+	2). Foundation
+	3). Co-ordination
+	4). All of the above
+	Solution :
+	option [4] is correct
+
+Q 2. Which of the given option represents loose coupling?
+	1). public class Person
+		{
+			private Address address;
+			public Person()
+				{
+					this.address = new Address();
+				}
+		}
+	2). public class Person
+		{
+	private Address address;
+	public Person(Address address)
+	{
+	this.address = address; 
+	}
+	}
+	3). Both 0 and 1
+	4). none of the above
+	
+	Solution :
+	option [2] is correct
+
+
+Q 3. Which element in the spring configuration file is used to tell the Spring container about a class and how it should be configured.            
+	1). <bean>
+	2). <id>
+	3). <class>
+	4). <beans>
+	
+	Solution :
+	option [1] is correct
+
+Q 4. <bean id="currencyConverter" class="training.Spring.CurrencyConverterImpl">
+     <property name="exchangeRate" value="44.50" /></bean>
+
+	Which type of dependency injection is used in above code?
+	1). Setter Injection
+	2). Constructor Injection
+	3). Interface Injection
+	4). No dependency injection is used
+	
+	Solution :
+	option [1] is correct
+
+Q 5. Which of the given below are the layers of Spring IO platform? 
+	1). byName
+	2). byType
+	3). byId
+	4). autodetect
+	
+	Solution :
+	option [3] is correct
+
+Q 6. Look at the bean below. 
+
+	public class ExampleBean 
+	{
+
+	  private int years;             
+          private String ultimateAnswer;
+	
+    	  public ExampleBean(int years, String ultimateAnswer) 
+		{
+        	  this.years = years;
+	          this.ultimateAnswer = ultimateAnswer;
+	        }
+        }
+
+	
+What would be the value of index, to instantiate the bean using constructor injection?
+
+	<bean id="exampleBean" class="examples.ExampleBean">
+  	<constructor-arg index="_____"><value>7500000</value></constructor-arg>
+  	<constructor-arg index="_____"><value>42</value></constructor-arg>
+	</bean>
+
+
+	1). '0 and 1
+	2). '1 and 2
+	3). Start-index value does not matter
+	4). There is no attribute called index with the <constructor-arg> element
+	
+	Solution :
+	option [1] is correct
+
+
+Q 7. Which of the given statement is true about spring boot?
+	1). Dynamically wires up beans
+	2). No requirement of XML configuration
+	3). Increases the size of build file
+	4). Increases the boiler plate code
+	
+	Solution :
+	option [1,2] are correct
+
+
+Q 8.     <bean id="datasource" class="com.spring.ConnectionDataSource">
+	 <property name="url"><value>${url}</value></property>
+         <property name="driver"><value>${driver}</value></property>
+         <property name="username"><value>${username}</value></property>
+ 	 <property name="password"><value>${password}</value></property>
+	 </bean>
+
+	 <bean id="placeHolderConfig" 
+	 class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+	 <property name="_______"><value>_________</value></property>
+	 </bean>
+
+	What must go into the blanks?
+	1). '1-base 2-properties
+	2). 1-location 2-properties file name
+	3). '1-resource 2-properties file name
+	4). 1-location 2-property
+	
+	Solution :
+	option [2] is correct
+
+
+Q 9. Which of the given options are implementation of BeanFactory?
+	1). XMLBeanFactory
+	2). DefaultListableBeanFactory
+	3). JNDIBeanFactory
+	4). StaticBeanFactory
+	
+
+	Solution :
+	option [1,2] are correct
+
+
+
+Q 10. Which implementation of 'Application Context' loads context definition from an XML file contained within a web application           
+	1). ClassPathXmlApplicationContext
+	2). FileSystemXmlApplicationContext
+	3). XmlWebApplicationContext
+	4). none of the above
+
+
+	Solution :
+	option [3] is correct
+
+
+Q 11. Which of the given options are implementation of DataSource?
+	1). BasicDataSource
+	2). ConnectionDataSource
+	3). DriverManagerDataSource
+	4). PoolingDataSource
+	
+	Solution :
+
+	option [1,3,4] are correct
+
+
+	Q 12. Which of the given syntax is correct to get a unique instance of a bean each time it is asked for?
+	1). <bean id=“foo” class=“com.igate.Foo” scope=“prototype” />
+	2). <bean id=“foo” class=“com.igate.Foo” scope=“singleton” />
+	3). <bean id=“foo” class=“com.igate.Foo” scope=“request” />
+	4). <bean id=“foo” class=“com.igate.Foo” scope=“session” />
+
+	
+	Solution :
+	option [1] is correct
+
+
+
+Q 13. Given the code snippet below, which of the following statements are true?
+  
+        @PersistenceContext
+        private EntityManager entityManager;
+        public void registerUser() {
+        User usr = new User(); // Line 1
+     	usr.setName(“John”); // Line 2
+     	entityManager.persist(usr); // Line 3
+    }           
+                                        Please choose all the answers that apply:
+	1). At line 1 the user instance is a managed Entity
+	2). At line 1 the user instance is a new Entity
+	3). At line 1 a new record will be inserted in the user table
+	4). At line 2 the entityManager will immediately reflect user name change to the database
+	5). At line 3 the entityManager will immediately reflect user name change to the database
+	
+	Solution :
+	option [2,5] are correct
+
+
+Q 14. Which of the given class is configured for internationalization?
+	1). CustomEditorConfigurer
+	2). PropertyPlaceHolderConfigurer
+	3). ResourceBundleMessageSource
+	4). AspectJWeaving
+	
+	Solution :
+	option [3] is correct
+
+
+Q 15.       <util:list id="cities">
+	    <bean class=“trg.spring.City"
+            p:name="Chicago" p:state="IL" p:population="2853114"/>
+            <bean class=" trg.spring.City"
+            p:name="Atlanta" p:state="GA" p:population="537958"/>
+     	    <bean class=" trg.spring.City"
+            p:name="Dallas" p:state="TX" p:population="1279910"/>
+      
+	   </util:list>
+	Which of the given statement is true about above code?
+	1). It will create a bean of type java.util.List that contains all of the values or beans that it contains.
+	2). util:list need to be replaced by list
+	3). p is the namespace used to set properties of beans
+	4). All of the above
+	
+	Solution :
+	option [1,3] are correcT
+
+Q 16. How many ways you can configure EntityManagerFactory in Spring?
+	1). LocalEntityManagerFactoryBean
+	2). EntityManagerFactory lookup over JNDI
+	3). LocalContainerEntityManagerFactoryBean
+	4). All of the above
+
+
+	Solution :
+	option [4] is correct
+
+
+Q 17. Consider the following SpEL expression:
+
+	<property name=“smallCities" value="#{cities.?[population lt 100000]}"/> 
+
+	Which of the folloing statements are correct about this code?(Assume that cities is a list that exists)           
+	1). This example uses a projection operator
+	2). This example uses a selection operator
+	3). It retrieves list of cities whose population is less than 100,000
+	4). The "smallCities" property will be wired with list of cities objects
+	
+	Solution :
+	option [2,3,4] are correct
+
+Q 18. The projection operator in SpEL is:           
+	1). .?[]
+	2). .![]
+	3). #{}
+	4). .#[]
+	
+	Solution :
+	option [2] is correct
+
+Q 19. SpEL's __________ operator gives access to static methods and constants on a given class           
+	1). #{}
+	2). T()
+	3). Type
+	4). Ternary
+	
+	Solution :
+	option [2] is correct
+
+Q 20. Which of the given annotation is used to execute spring boot application?
+	1). @Configuraton
+	2). @EnableAutoConfiguration
+	3). @Resource
+	4). @Bean
+	
+	Solution :
+	option [2] is correct.
+
+Q 21.Classes annotated with __________ are identified as persistent classes by the annotatedClasses property of the AnnotationSessionFactoryBean.                                 
+	1). @Persist
+	2). @Mapping
+	3). @Repository
+	4). @Entity
+
+	Solution :
+	option [4] is correct
+
+
+Q 22. To use repository from Sping Data, create an interface to extend following interface
+	1). org.springframework.data.repository.Repository(T,ID extends Serializable>
+	2). org.springframework.data.repository.Repository(ID extends Serializable,T>
+	3). org.springframework.data.repository.Repository(<T >)
+	4). 4) none of the above.
+
+
+	Solution :
+	option [1] is correct
+
+
+
+Q 23. Which DataSource matches the following description ?                                  
+
+	"You want to acquire the connection only once and hold on to it. 
+	You should call the destroy() method when you are done with database processing."
+	1). AbstractDataSource
+	2). SingleConnectionDataSource
+	3). BasicDataSource
+	4). DriverManagerDataSource
+
+
+	Solution :
+	option [2] is correct
+
+Q 24. Container-managed and application-managed entity managers are associated with an EntityManagerFactory instance.
+	1). TRUE
+	2). FALSE
+
+	Solution :
+	option [1] is correct
+
+
+
+Q 25. Spring’s core transaction management abstraction is based on the interface?
+	1). PlatformTransaction
+	2). PlatformTransactionManager
+	3). TransactionManager
+	4). PlatformManager
+	
+	
+	Solution :
+	option [2] is correct
